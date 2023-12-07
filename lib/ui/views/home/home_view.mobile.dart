@@ -14,7 +14,7 @@ class HomeViewMobile extends ViewModelWidget<HomeViewModel> {
     return Scaffold(
       body: SafeArea(
         child: ListView(
-          shrinkWrap: false,
+          // shrinkWrap: false,
           children: [
             Container(
               width: screenWidth(context),

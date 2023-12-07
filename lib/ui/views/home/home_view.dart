@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_builder/responsive_builder.dart';
+// import 'package:responsive_builder/responsive_builder.dart';
+// import 'package:responsive_builder/responsive_builder.dart';
 import 'package:stacked/stacked.dart';
+import 'package:tekflat_design/tekflat_design.dart';
 
 import 'home_view.desktop.dart';
 import 'home_view.tablet.dart';
@@ -16,11 +18,18 @@ class HomeView extends StackedView<HomeViewModel> {
     HomeViewModel viewModel,
     Widget? child,
   ) {
-    return ScreenTypeLayout.builder(
-      mobile: (_) => const HomeViewMobile(),
-      tablet: (_) => const HomeViewTablet(),
-      desktop: (_) => const HomeViewDesktop(),
+    return TekResponsive.appResBuilder(
+      TekResponsive.resBuilder(
+        desktop: const HomeViewDesktop(),
+        tablet: const HomeViewTablet(),
+        mobile: const HomeViewMobile(),
+      ),
     );
+    // return ScreenTypeLayout.builder(
+    //   mobile: (_) => const HomeViewMobile(),
+    //   tablet: (_) => const HomeViewTablet(),
+    //   desktop: (_) => const HomeViewDesktop(),
+    // );
   }
 
   @override
