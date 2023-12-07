@@ -255,21 +255,7 @@ class HomeViewDesktop extends ViewModelWidget<HomeViewModel> {
           ),
         ],
       ),
-      body: ListView(
-        children: [
-          TekDivider(
-            color: TekColors().primary,
-          ),
-          // SizedBox(
-          //   width: screenWidth(context) / 3,
-          //   child: TekButton(
-          //     onPressed: () {},
-          //     type: TekButtonType.primary,
-          //     text: 'Save',
-          //   ),
-          // )
-        ],
-      ),
     );
+    // body: TekVerticalScroll());
   }
 }
